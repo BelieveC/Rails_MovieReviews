@@ -2,7 +2,9 @@
   <div class="panel-default">
     <div class="row">
       <div class="col-md-4">
-        <%= image_tag @movie.image.url(:medium) %>
+        <%= image_tag @movie.image.url,id:"show_image" %>
+        <div class="star-rating" data-score=<%= @avg %>></div>
+        <em><%= "#{@reviews.length} Reviews" %></em>
           <div class="table-responsive">
             <table class="table">
               <tbody>
